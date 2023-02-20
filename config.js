@@ -1,7 +1,7 @@
 module.exports = {
     app: {
-        token: '',
-        playing: 'Slash Commands',
+        token: 'MzY1OTgxNzU5Njg0NDc2OTI4.GSErjZ.rF6Z0-uVSPuH1ZAOn6eZ0Tw2BfSqSEpH6eydzk',
+        playing: '/help',
         global: true,
         guild: '913856041937158145'
     },
