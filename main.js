@@ -1,5 +1,6 @@
 const { Player } = require('discord-player');
 const { Client, GatewayIntentBits } = require('discord.js');
+const Economy  = require('discord-economy-super')
 
 global.client = new Client({
     intents: [
@@ -14,6 +15,7 @@ global.client = new Client({
 
 client.config = require('./config');
 
+global.eco = new Economy()
 global.player = new Player(client, client.config.opt.discordPlayer);
 
 require('./src/loader');

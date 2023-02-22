@@ -5,7 +5,6 @@ client.commands = new Collection();
 CommandsArray = [];
 
 
-
 const events = readdirSync('./events/').filter(file => file.endsWith('.js'));
 
 console.log(`Loading events...`);
@@ -37,3 +36,8 @@ client.on('ready', (client) => {
  if (client.config.app.global) client.application.commands.set(CommandsArray)
   else client.guilds.cache.get(client.config.app.guild).commands.set(CommandsArray)
 })
+
+eco.on('ready', economy => {
+    console.log(`Economy is ready!`);
+    eco = economy
+  })
