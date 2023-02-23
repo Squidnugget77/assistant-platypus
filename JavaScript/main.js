@@ -20,5 +20,7 @@ global.player = new Player(client, client.config.opt.discordPlayer);
 
 require('./src/loader');
 require('./src/events');
+console.log(client.channels.cache.size);
+
 
 client.login(client.config.app.token);
