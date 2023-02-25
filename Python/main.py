@@ -2,8 +2,6 @@ import discord, os
 from dotenv import load_dotenv
 from discord.utils import get
 
-global ryan
-ryan = False
 
 intents = discord.Intents.default()
 intents.message_content = True
@@ -16,6 +14,7 @@ async def on_ready():
 
 @client.event
 async def on_message(msg):
+    global ryan
     print(f' In [ {msg.channel} ] by [ {msg.author} ]: {msg.content}')
     if msg.author == client.user:
         return
