@@ -13,7 +13,7 @@ module.exports = {
             commands: []
         },
         maxVol: 100,
-        leaveOnEnd: true,
+        leaveOnEnd: false,
         loopMessage: false,
         spotifyBridge: true,
         defaultvolume: 50,
