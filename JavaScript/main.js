@@ -22,7 +22,5 @@ require('./src/loader');
 require('./src/events');
 console.log(client.channels.cache.size);
 
-const maintenance = require("./maintenance.json")
-if (maintenance.status) return interaction.reply("Maintenance, you can't execute commands while we are in maintenance ! Message: "+maintenance.message)
 
 client.login(client.config.app.token);

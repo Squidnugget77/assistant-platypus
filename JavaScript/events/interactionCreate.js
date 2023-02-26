@@ -4,6 +4,8 @@ module.exports = (client, inter) => {
     if (inter.type === InteractionType.ApplicationCommand) {
         const DJ = client.config.opt.DJ;
         const command = client.commands.get(inter.commandName);
+        var maintenance = require("/Users/lucap/Documents/! Development !/Discord Bots/assistant-platypus/JavaScript/maintenance.json")
+        if (maintenance.status) return inter.reply("**! Maintenance !** You can't execute commands while we are in maintenance- \n Message: "+maintenance.message)
 
     if (!command) return inter.reply({ embeds: [ new EmbedBuilder().setColor('#ff0000').setDescription('❌ | Error! Please contact Developers!')], ephemeral: true, }), client.slash.delete(inter.commandName)
     if (command.permissions && !inter.member.permissions.has(command.permissions)) return inter.reply({ embeds: [ new EmbedBuilder().setColor('#ff0000').setDescription(`❌ | You need do not have the proper permissions to exacute this command`)], ephemeral: true, })
