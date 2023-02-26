@@ -1,2 +1,3 @@
-JavaScript/config.js
-JavaScript/config.js
+# Node
+node_modules/
+package-lock.json

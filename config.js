@@ -9,7 +9,7 @@ module.exports = {
     opt: {
         DJ: {
             enabled: false,
-            roleName: 'Assistant Platypus',
+            roleName: '',
             commands: []
         },
         maxVol: 100,

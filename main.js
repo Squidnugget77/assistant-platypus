@@ -22,5 +22,4 @@ require('./src/loader');
 require('./src/events');
 console.log(client.channels.cache.size);
 
-
 client.login(client.config.app.token);

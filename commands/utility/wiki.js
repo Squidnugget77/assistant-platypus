@@ -12,7 +12,7 @@ module.exports = {
       required: true,
     }
   ],
-  execute({inter}) {
+  async execute({inter}) {
     const search = inter.options.getString('search');
 
     const link = `https://www.wikipedia.org/w/index.php?search=${search}&ns0=1`;
@@ -24,9 +24,9 @@ module.exports = {
       { name: `You Searched for:`, value: `${search}`},
       { name: `Results:`, value: `[Here's what I found](${link})` },
     )
-    .setColor('ff0000')
+    .setColor('c99997')
   
-    inter.reply({ embeds: [embed] })
+    await inter.reply({ embeds: [embed] })
 
   }
 }
