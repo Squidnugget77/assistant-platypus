@@ -1,9 +1,10 @@
+require('dotenv').config();
 module.exports = {
     app: {
-        token: 'MzY1OTgxNzU5Njg0NDc2OTI4.G6ooFD.uMWIG6fCxnemwofhOXvjTnly1ldmYtYLPxVMMY',
-        playing: '/help',
+        token: process.env.TOKEN,
+        playing: '/play',
         global: true,
-        guild: '913856041937158145'
+        guild: process.env.GUILD,
     },
 
     opt: {
