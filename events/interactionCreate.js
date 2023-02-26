@@ -1,5 +1,4 @@
 const { EmbedBuilder, InteractionType } = require('discord.js');
-const { Configuration } = require('openai');
 const fs = require('fs');
 
 const filename = 'maintenance.json';
@@ -10,23 +9,7 @@ module.exports = (client, inter) => {
         const DJ = client.config.opt.DJ;
         const command = client.commands.get(inter.commandName);
 
-        fs.watchFile(filename, () => {
-            fs.readFile(filename, (err, data) => {
-              if (err) {
-                console.error(`Error reading file: ${err}`);
-                return;
-              }
-          
-              // Parse the JSON data
-              const jsonData = JSON.parse(data);
-          
-              // Do something with the data
-              console.log(jsonData);
-            });
-          });
-        // var maintenance = require("/Users/lucap/Documents/! Development !/Discord Bots/assistant-platypus/maintenance.json")
-        // if (maintenance.status) return inter.reply("**! Maintenance !** You can't execute commands while we are in maintenance- \n Message: "+maintenance.message)
-
+        
     if (!command) return inter.reply({ embeds: [ new EmbedBuilder().setColor('#ff0000').setDescription('❌ | Error! Please contact Developers!')], ephemeral: true, }), client.slash.delete(inter.commandName)
     if (command.permissions && !inter.member.permissions.has(command.permissions)) return inter.reply({ embeds: [ new EmbedBuilder().setColor('#ff0000').setDescription(`❌ | You need do not have the proper permissions to exacute this command`)], ephemeral: true, })
     if (DJ.enabled && DJ.commands.includes(command) && !inter.member._roles.includes(inter.guild.roles.cache.find(x => x.name === DJ.roleName).id)) return inter.reply({ embeds: [ new EmbedBuilder().setColor('#ff0000').setDescription(`❌ | This command is reserved For members with \`${DJ.roleName}\` `)], ephemeral: true, })

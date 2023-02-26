@@ -9,12 +9,11 @@
         "start": "node main.js"
     },
     "dependencies": {
-        "discord-economy-super": "^1.7.4",
+        "discord-economy-super": "^1.7.5",
         "discord-player": "^5.3.1",
         "discord.js": "^14.1.2",
         "ffmpeg-static": "^5.0.2",
         "ms": "^3.0.0-canary.1",
-        "openai": "^3.1.0",
         "opusscript": "^0.0.8"
     }
 }
