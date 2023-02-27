@@ -3,14 +3,14 @@ const { Client, GatewayIntentBits } = require('discord.js');
 const Economy  = require('discord-economy-super')
 
 global.client = new Client({
-    intents: [
-        GatewayIntentBits.Guilds,
-        GatewayIntentBits.GuildMembers,
-        GatewayIntentBits.GuildMessages,
-        GatewayIntentBits.GuildVoiceStates,
-        GatewayIntentBits.MessageContent
-    ],
-   disableMentions: 'everyone',
+  intents: [
+    GatewayIntentBits.Guilds,
+    GatewayIntentBits.GuildMembers,
+    GatewayIntentBits.GuildMessages,
+    GatewayIntentBits.GuildVoiceStates,
+    GatewayIntentBits.MessageContent
+  ],
+  disableMentions: 'everyone',
 });
 
 client.config = require('./config');
