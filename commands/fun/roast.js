@@ -90,6 +90,7 @@ module.exports =  {
 			"your advice is about as useful as a paper-mache bomb shelter.",
 			"is it sad that your theme song might as well have a 0/0 signature?",
 			"you're so fat, you make the galaxy look like it's on the molecular scale.",
+			"your mom is like a brick: dirty, flat and gets laid by Mexicans",
 		];
 		inter.reply({content: `Roast sent!`, ephemeral: true});
 		await inter.channel.send(`Hey ${user}, ${roasts[Math.floor(Math.random() * roasts.length)]} `)
