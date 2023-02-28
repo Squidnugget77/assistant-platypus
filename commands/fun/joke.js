@@ -8,7 +8,7 @@ module.exports = {
 	async execute({inter}) {
 		const https = require('https');
 
-		const url = 'https://v2.jokeapi.dev/joke/Any?blacklistFlags=religious,political,racist,sexist,explicit&format=txt';
+		const url = 'https://v2.jokeapi.dev/joke/Any?blacklistFlags=nsfw&format=txt';
 		const options = {
 		method: 'GET',
 		};
