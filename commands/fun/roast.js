@@ -2,8 +2,8 @@ const Discord = module.require("discord.js");
 const { EmbedBuilder, ApplicationCommandOptionType } = require("discord.js")
 
 module.exports =  {
-	name: "roast",
-	description: "Roast someone!",
+	name: 'roast',
+	description: 'Roast someone!',
 	options: [
 		{
 			name: 'user',
