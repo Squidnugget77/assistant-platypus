@@ -39,7 +39,7 @@ module.exports = {
     
     await inter.editReply({ content:`Loading your ${res.playlist ? 'playlist' : 'track'}... 🎧`});
     
-    res.playlist ? queue.addTracks(res.tracks) : queue.addTrack(res.tracks[0]);
+    res.playlist ? queue.addTracks(res.tracks) : queue.addTrack(res.tracks[-1]);
     
     if (!queue.playing) await queue.play();
   },
